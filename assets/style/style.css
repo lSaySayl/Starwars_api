@@ -1,0 +1,191 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #16161a;
+}
+
+.container__header{
+  background-image: url("../img/Header_bg.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.container__logo {
+  text-align: center;
+}
+
+.container__logo img {
+  margin-top: 100px;
+  width: 340px;
+}
+
+.container__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
+
+.container__imgs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.container__imgs {
+  display: flex;
+  flex-wrap: wrap;
+
+  padding: 20px;
+}
+
+.container__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 250px;
+  min-height: 250px;
+  background-color: #00000060;
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.container__img:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.4s;
+  background-color: rgba(0, 0, 0, 0.774);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.container__img .films {
+  height: 135px;
+}
+
+.card {
+  position: relative;
+  width: 20%;
+  height: 400px;
+}
+
+.card section {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transition: 1s ease-in-out;
+}
+
+.card .front {
+  background-color: #00000060;
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  border-radius: 20px;
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.card .back {
+  display: flex;
+  flex-direction: column;
+  background-color: #00000060;
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  border-radius: 20px;
+  color: white;
+  transform: perspective(10000px) rotateY(180deg);
+}
+
+.card:hover .front {
+  transform: perspective(10000px) rotateY(180deg);
+}
+
+.card:hover .back {
+  transform: perspective(10000px) rotateY(360deg);
+}
+
+.card section h1 {
+  color: #72757e;
+  margin-bottom: 10px;
+
+}
+
+.card section p {
+  color: #72757e;
+  margin-bottom: 10px;
+}
+
+.card section span {
+  font-weight: 600;
+
+}
+
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  padding: 20px;
+  margin: 30px 0 40px 0;
+}
+
+
+
+.container__characters,
+.container__species,
+.container__planets,
+.container__starships,
+.container__vehicles,
+.container__films
+
+ {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 50px;
+  height: 100vh;
+}
+
+.container__characters .card section span {
+  
+  color: #0078CC;
+
+
+}
+.container__species .card section span {
+
+  color: #FB2606;
+
+}
+.container__planets .card section span {
+  color:white;
+
+}
+.container__starships .card section span {
+  color: #782DCC;
+
+}
+
+.container__vehicles .card section span {
+  color: #278418;
+  
+
+}
+.container__films .card section span {
+  color: #57150D;
+
+
+}
+
